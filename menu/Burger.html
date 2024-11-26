@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Menu.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>BURGER JOS - Burger</title>
+</head>
+<body>
+    <div class="menu-container">
+        <header class="navbar-container">
+            <h2>BURGER <span>JOS</span></h2>
+            <nav class="menu">
+                <ul>
+                    <li><a href="/home/Home.html">Home</a></li>
+                    <li><a href="/menu/Burger.html">Menu</a></li>
+                    <li><a href="/cart/cart.html">Cart <span id="cart-count" style="display: none;">0</span></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="menu-content ">
+            <header>
+                <h1>Haloo, Selamat datang di burger Jos</h1>
+                <p>Eat First, Think Before!</p>
+                <div class="filter-buttons m-5 sm:m-6 md:m-6 lg:m-7 xl:m-10 ">
+                    <button onclick="navigateToPage('Burger.html')">Burger</button>
+                    <button onclick="navigateToPage('Hotdog.html')">Hotdog</button>
+                    <button onclick="navigateToPage('Kentang.html')">Kentang</button>
+                    <button onclick="navigateToPage('Minuman.html')">Minuman</button>
+                </div>
+            </header>
+            
+            <section class="Menu">
+                <div class="item">
+                    <img src="/assets/menu/Burger/burger ayam.jpg" alt="Burger Ayam" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Burger Ayam', 'Burger Ayam adalah burger lezat dengan ayam goreng, dilengkapi dengan saus spesial.', 12, '/assets/menu/Burger/burger ayam.jpg')">
+                    <h3>Burger Ayam</h3>
+                    <p>$12</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Burger Ayam', 12)">Add to Cart</button>
+                </div>
+                
+                <div class="item">
+                    <img src="/assets/menu/Burger/burger basic.jpg" alt="Burger Basic" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Burger Basic', 'Burger Basic adalah burger klasik dengan daging sapi, selada, tomat, dan saus mayo.', 12, '/assets/menu/Burger/burger basic.jpg')">
+                    <h3>Burger Basic</h3>
+                    <p>$12</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Burger Basic', 12)">Add to Cart</button>
+                </div>
+                
+                <div class="item">
+                    <img src="/assets/menu/Burger/burger ekstra daging.jpeg" alt="Burger Ekstra Daging" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Burger Ekstra Daging', 'Burger Ekstra Daging memiliki tambahan daging sapi lezat, cocok untuk penggemar daging!', 12, '/assets/menu/Burger/burger ekstra daging.jpeg')">
+                    <h3>Burger Ekstra Daging</h3>
+                    <p>$12</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Burger Ekstra Daging', 12)">Add to Cart</button>
+                </div>
+                
+                <div class="item">
+                    <img src="/assets/menu/Burger/burger keju.jpeg" alt="Burger Keju" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Burger Keju', 'Burger Keju adalah burger lezat dengan potongan keju leleh yang menggoda!', 12, '/assets/menu/Burger/burger keju.jpeg')">
+                    <h3>Burger Keju</h3>
+                    <p>$12</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Burger Keju', 12)">Add to Cart</button>
+                </div>
+                
+                <div class="item">
+                    <img src="/assets/menu/Burger/burger mini.jpg" alt="Burger Mini" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Burger Mini', 'Burger Mini adalah pilihan kecil namun menggugah selera, cocok untuk ngemil!', 12, '/assets/menu/Burger/burger mini.jpg')">
+                    <h3>Burger Mini</h3>
+                    <p>$12</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Burger Mini', 12)">Add to Cart</button>
+                </div>
+                
+                <div class="item">
+                    <img src="/assets/menu/Burger/burger spesial.jpg" alt="Burger Spesial" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Burger Spesial', 'Burger Spesial adalah pilihan premium dengan daging berkualitas dan saus istimewa.', 12, '/assets/menu/Burger/burger spesial.jpg')">
+                    <h3>Burger Spesial</h3>
+                    <p>$12</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Burger Spesial', 12)">Add to Cart</button>
+                </div>
+                
+                <div class="item">
+                    <img src="/assets/menu/Burger/Burger Bacon Avocado.jpg" alt="Burger Bacon Avocado" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Burger Bacon Avocado', 'Burger Bacon Avocado adalah burger dengan bacon renyah dan irisan alpukat segar.', 12, '/assets/menu/Burger/Burger Bacon Avocado.jpg')">
+                    <h3>Burger Bacon Avocado</h3>
+                    <p>$12</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Burger Bacon Avocado', 12)">Add to Cart</button>
+                </div>
+                
+                <div class="item">
+                    <img src="/assets/menu/Burger/burger Beef Teriyaki.jpg" alt="Burger Beef Teriyaki" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Burger Beef Teriyaki', 'Burger Beef Teriyaki adalah burger dengan cita rasa khas teriyaki pada daging sapi pilihan.', 12, '/assets/menu/Burger/burger Beef Teriyaki.jpg')">
+                    <h3>Burger Beef Teriyaki</h3>
+                    <p>$12</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Burger Beef Teriyaki', 12)">Add to Cart</button>
+                </div>
+                
+                <div class="item">
+                    <img src="/assets/menu/Burger/Burger Tuna Delight.jpg" alt="Burger Tuna Delight" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Burger Tuna Delight', 'Burger Tuna Delight adalah burger dengan tuna segar dan saus spesial yang menyegarkan.', 12, '/assets/menu/Burger/Burger Tuna Delight.jpg')">
+                    <h3>Burger Tuna Delight</h3>
+                    <p>$12</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Burger Tuna Delight', 12)">Add to Cart</button>
+                </div>
+                
+                <div class="item">
+                    <img src="/assets/menu/Burger/Burger Veggie Deluxe.jpg" alt="Burger Veggie Deluxe" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Burger Veggie Deluxe', 'Burger Veggie Deluxe adalah burger dengan pilihan sayuran segar untuk pecinta vegetarian.', 12, '/assets/menu/Burger/Burger Veggie Deluxe.jpg')">
+                    <h3>Burger Veggie Deluxe</h3>
+                    <p>$12</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Burger Veggie Deluxe', 12)">Add to Cart</button>
+                </div>
+                
+            </section>
+        </main>
+        <!-- popup untuk Menampilkan Detail Produk -->
+        <div id="productpopup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closepopup()">&times;</span>
+                <h3 id="popupProductName"></h3>
+                <img id="popupProductImage" src="" alt="Product Image">
+                <p id="popupProductDescription"></p>
+                <p><strong>Price: $<span id="popupProductPrice"></span></strong></p>
+                <div class="quantity-controls">
+                    <button onclick="updateQuantity(this, -1)">-</button>
+                    <span class="quantity" id="popupQuantity">1</span>
+                    <button onclick="updateQuantity(this, 1)">+</button>
+                </div>
+                <button id="addToCartpopupBtn" class="cart-button">Add to Cart</button>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script src="/menu/menu.js"></script>
+</html>

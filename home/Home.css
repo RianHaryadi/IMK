@@ -1,0 +1,247 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+.navbar-container {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+.navbar-container h2 {
+    font-size: 24px;
+    color: #ffb03b;
+    margin: 0;
+}
+
+.navbar-container h2 span {
+    color: #fff;
+}
+
+.navbar-container .menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Styling untuk tautan navbar agar sama tinggi dengan tombol login */
+.navbar-container .menu ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px; /* Samakan tinggi dengan tombol Login */
+    padding: 0 15px; /* Tambahkan padding horizontal */
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px; /* Untuk menjaga konsistensi bentuk */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-container .menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Khusus untuk tombol Login */
+.navbar-container .menu ul li .login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px; /* Samakan tinggi dengan tautan lain */
+    padding: 0 20px;
+    color: #fff;
+    background-color: #ffb03b;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.navbar-container .menu ul li .login-button:hover {
+    background-color: #e0a035;
+    color: #333;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-container .menu ul li a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .navbar-container .menu ul li .login-button {
+        padding: 10px 20px;
+    }
+}
+
+
+/* Hide menu icon on larger screens */
+#menu-icon {
+    display: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-image: url(/assets/bg/bg1.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f8f8f8;
+}
+
+header h1 {
+    font-size: 30px;
+    color : #ffb03b;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #1c1b1b;
+    color: #ffffff;
+    padding: 20px;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    margin-bottom: 10px;
+}
+
+.footer-social-icons {
+    margin: 10px 0;
+}
+
+.footer-social-icons a {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.footer-column h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    display: block;
+    color: #b0b0b0;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+/* Responsive Styling for Smaller Screens */
+@media screen and (max-width: 768px) {
+    /* Show the menu icon and hide the main menu */
+    #menu-icon {
+        display: block; /* Show the menu icon on small screens */
+    }
+
+    /* Hide the menu initially */
+    .navbar-container .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 10;
+    }
+
+    /* Show the menu when .active class is added to navbar-container */
+    .navbar-container.active .menu {
+        display: flex;
+    }
+
+    /* Menu list styling for mobile */
+    .navbar-container .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Footer adjustments for mobile */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+}
+/* Styling untuk tombol login */
+.navbar-container .menu ul li .login-button {
+    display: inline-block;
+    padding: 8px 20px;
+    color: #fff;
+    background-color: #ffb03b;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.navbar-container .menu ul li .login-button:hover {
+    background-color: #e0a035;
+    color: #333;
+}
+@media screen and (max-width: 768px) {
+    .navbar-container .menu ul li .login-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}

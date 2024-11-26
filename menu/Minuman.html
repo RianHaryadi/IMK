@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Menu.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Burger Jos Menu-Minuman</title>
+</head>
+<body>
+    <div class="menu-container">
+        <header class="navbar-container">
+            <h2>BURGER <span>JOS</span></h2>
+            <nav class="menu">
+                <ul>
+                    <li><a href="/home/Home.html">Home</a></li>
+                    <li><a href="/menu/Burger.html">Menu</a></li>
+                    <li><a href="/cart/cart.html">Cart <span id="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="menu-content ">
+            <header>
+                <h1>Haloo, Selamat datang di burger Jos</h1>
+                <p>Eat First, Think Before!</p>
+                <div class="filter-buttons m-5 sm:m-6 md:m-6 lg:m-7 xl:m-10 ">
+                    <button onclick="navigateToPage('Burger.html')">Burger</button>
+                    <button onclick="navigateToPage('Hotdog.html')">Hotdog</button>
+                    <button onclick="navigateToPage('Kentang.html')">Kentang</button>
+                    <button onclick="navigateToPage('Minuman.html')">Minuman</button>
+                </div>
+            </header>
+            
+            <section class="Menu">
+                <div class="item">
+                    <img src="/assets/menu/Minuman/Classic Lemonade.jpg" alt="Classic Lemonade" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Classic Lemonade', 'Minuman segar dengan rasa lemon klasik yang menyegarkan.', 5, '/assets/menu/Minuman/Classic Lemonade.jpg')">
+                    <h3>Classic Lemonade</h3>
+                    <p>$5</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Classic Lemonade', 5)">Add to Cart</button>
+                </div>
+            
+                <div class="item">
+                    <img src="/assets/menu/Minuman/Coca-Cola.jpg" alt="Coca-Cola" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Coca-Cola', 'Minuman cola klasik yang menyegarkan dengan rasa manis.', 5, '/assets/menu/Minuman/Coca-Cola.jpg')">
+                    <h3>Coca-Cola</h3>
+                    <p>$5</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Coca-Cola', 5)">Add to Cart</button>
+                </div>
+            
+                <div class="item">
+                    <img src="/assets/menu/Minuman/Cold Brew Coffee.jpg" alt="Cold Brew Coffee" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Cold Brew Coffee', 'Kopi dingin yang diseduh dengan metode cold brew untuk rasa kopi yang kuat.', 5, '/assets/menu/Minuman/Cold Brew Coffee.jpg')">
+                    <h3>Cold Brew Coffee</h3>
+                    <p>$5</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Cold Brew Coffee', 5)">Add to Cart</button>
+                </div>
+            
+                <div class="item">
+                    <img src="/assets/menu/Minuman/Fresh Fruit Juice.jpg" alt="Fresh Fruit Juice" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Fresh Fruit Juice', 'Jus buah segar dengan campuran berbagai buah tropis.', 5, '/assets/menu/Minuman/Fresh Fruit Juice.jpg')">
+                    <h3>Fresh Fruit Juice</h3>
+                    <p>$5</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Fresh Fruit Juice', 5)">Add to Cart</button>
+                </div>
+            
+                <div class="item">
+                    <img src="/assets/menu/Minuman/Ice Salted Caramel Latte.jpg" alt="Ice Salted Caramel Latte" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Ice Salted Caramel Latte', 'Latte dingin dengan rasa karamel asin yang unik.', 5, '/assets/menu/Minuman/Ice Salted Caramel Latte.jpg')">
+                    <h3>Ice Salted Caramel Latte</h3>
+                    <p>$5</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Ice Salted Caramel Latte', 5)">Add to Cart</button>
+                </div>
+            
+                <div class="item">
+                    <img src="/assets/menu/Minuman/Iced Lemon Tea.jpg" alt="Iced Lemon Tea" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Iced Lemon Tea', 'Teh lemon dingin dengan rasa asam yang menyegarkan.', 5, '/assets/menu/Minuman/Iced Lemon Tea.jpg')">
+                    <h3>Iced Lemon Tea</h3>
+                    <p>$5</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Iced Lemon Tea', 5)">Add to Cart</button>
+                </div>
+            
+                <div class="item">
+                    <img src="/assets/menu/Minuman/Mango Lassi.jpg" alt="Mango Lassi" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Mango Lassi', 'Minuman mangga kental dengan yogurt, menyegarkan dan lezat.', 5, '/assets/menu/Minuman/Mango Lassi.jpg')">
+                    <h3>Mango Lassi</h3>
+                    <p>$5</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Mango Lassi', 5)">Add to Cart</button>
+                </div>
+            
+                <div class="item">
+                    <img src="/assets/menu/Minuman/Milkshake.jpg" alt="Milkshake" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Milkshake', 'Milkshake krimi yang lezat, tersedia dalam berbagai rasa.', 5, '/assets/menu/Minuman/Milkshake.jpg')">
+                    <h3>Milkshake</h3>
+                    <p>$5</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Milkshake', 5)">Add to Cart</button>
+                </div>
+            
+                <div class="item">
+                    <img src="/assets/menu/Minuman/Root Beer.jpg" alt="Root Beer" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Root Beer', 'Root beer manis dan khas, sangat menyegarkan.', 5, '/assets/menu/Minuman/Root Beer.jpg')">
+                    <h3>Root Beer</h3>
+                    <p>$5</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Root Beer', 5)">Add to Cart</button>
+                </div>
+            
+                <div class="item">
+                    <img src="/assets/menu/Minuman/Sparkling Water Lemon.jpg" alt="Sparkling Water Lemon" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Sparkling Water Lemon', 'Air mineral berkarbonasi dengan rasa lemon yang menyegarkan.', 5, '/assets/menu/Minuman/Sparkling Water Lemon.jpg')">
+                    <h3>Sparkling Water Lemon</h3>
+                    <p>$5</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Sparkling Water Lemon', 5)">Add to Cart</button>
+                </div>
+            </section>            
+        </main>
+        <!-- popup untuk Menampilkan Detail Produk -->
+        <div id="productpopup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closepopup()">&times;</span>
+                <h3 id="popupProductName"></h3>
+                <img id="popupProductImage" src="" alt="Product Image">
+                <p id="popupProductDescription"></p>
+                <p><strong>Price: $<span id="popupProductPrice"></span></strong></p>
+                <div class="quantity-controls">
+                    <button onclick="updateQuantity(this, -1)">-</button>
+                    <span class="quantity" id="popupQuantity">1</span>
+                    <button onclick="updateQuantity(this, 1)">+</button>
+                </div>
+                <button id="addToCartpopupBtn" class="cart-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/menu/menu.js"></script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cart.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Cart-Buger Joss</title>
+</head>
+<body>
+    <div class="cart-container">
+        <header class="navbar-container">
+            <h2>Buger<span>Joss</span></h2>
+            <nav class="menu">
+                <ul>
+                    <li><a href="/home/Home.html">Home</a></li>
+                    <li><a href="/menu/Burger.html">Menu</a></li>
+                    <li><a href="Cart.html">Cart <span id="cart-count">0</span> </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="cart-content">
+            <h1>Your Cart</h1>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: $0</p>
+
+            <!-- Tombol Pesan Sekarang -->
+            <button id="order-now" class="order-button" disabled>Pesan Sekarang</button>
+        </main>
+    </div>
+
+    <script src="/cart/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Menu.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Burger Jos Menu-Hotdog</title>
+</head>
+<body>
+    <div class="menu-container">
+        <header class="navbar-container">
+            <h2>BURGER <span>JOS</span></h2>
+            <nav class="menu">
+                <ul>
+                    <li><a href="/home/Home.html">Home</a></li>
+                    <li><a href="/menu/Burger.html">Menu</a></li>
+                    <li><a href="/cart/cart.html">Cart <span id="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="menu-content ">
+            <header>
+                <h1>Haloo, Selamat datang di burger Jos</h1>
+                <p>Eat First, Think Before!</p>
+                <div class="filter-buttons m-5 sm:m-6 md:m-6 lg:m-7 xl:m-10 ">
+                    <button onclick="navigateToPage('Burger.html')">Burger</button>
+                    <button onclick="navigateToPage('Hotdog.html')">Hotdog</button>
+                    <button onclick="navigateToPage('Kentang.html')">Kentang</button>
+                    <button onclick="navigateToPage('Minuman.html')">Minuman</button>
+                </div>
+            </header>
+            
+            <section class="Menu">
+                <div class="item">
+                    <img src="/assets/menu/Hotdog/Mexican-Hotdogs-WEBSITE-scaled.jpg" alt="Hotdog Meksiko" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Meksiko', 'Hotdog Meksiko dengan cita rasa khas Meksiko!', 10, '/assets/menu/Hotdog/Mexican-Hotdogs-WEBSITE-scaled.jpg')">
+                    <h3>Hotdog Meksiko</h3>
+                    <p>$10</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Hotdog Meksiko', 10)">Add to Cart</button>
+                </div>
+            
+                <div class="item">
+                    <img src="/assets/menu/Hotdog/Summer-Tuna-Roll-with-Lettuce-1.jpg" alt="Hotdog Tuna Mayo" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Tuna Mayo', 'Hotdog Tuna Mayo dengan isian tuna lezat dan mayo creamy.', 7, '/assets/menu/Hotdog/Summer-Tuna-Roll-with-Lettuce-1.jpg')">
+                    <h3>Hotdog Tuna Mayo</h3>
+                    <p>$7</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Hotdog Tuna Mayo', 7)">Add to Cart</button>
+                </div>
+            
+                <div class="item">
+                    <img src="/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.21.53.jpeg" alt="Hotdog Terimayo" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Terimayo', 'Hotdog Terimayo dengan saus teriyaki dan mayo khas Jepang.', 8, '/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.21.53.jpeg')">
+                    <h3>Hotdog Terimayo</h3>
+                    <p>$8</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Hotdog Terimayo', 8)">Add to Cart</button>
+                </div>
+            
+                <div class="item">
+                    <img src="/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.22.14.jpeg" alt="Hotdog Klasik" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Klasik', 'Hotdog klasik dengan rasa sederhana namun nikmat.', 4, '/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.22.14.jpeg')">
+                    <h3>Hotdog Klasik</h3>
+                    <p>$4</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Hotdog Klasik', 4)">Add to Cart</button>
+                </div>
+            
+                <div class="item">
+                    <img src="/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.25.37.jpeg" alt="Hotdog Keju" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Keju', 'Hotdog Keju dengan keju leleh yang melimpah.', 12, '/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.25.37.jpeg')">
+                    <h3>Hotdog Keju</h3>
+                    <p>$12</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Hotdog Keju', 12)">Add to Cart</button>
+                </div>
+            
+                <div class="item">
+                    <img src="/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.38.18.jpeg" alt="Limoncello" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Pedas Jalapeno', 'Hotdog pedas dengan tambahan irisan jalapeno segar.', 9, '/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.38.18.jpeg')">
+                    <h3>Hotdog Pedas Jalapeno</h3>
+                    <p>$9</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Hotdog Pedas Jalapeno', 9)">Add to Cart</button>
+                </div>
+            
+                <div class="item">
+                    <img src="/assets/menu/Hotdog/Hotdog Hawaian.jpg" alt="Hotdog Hawaian" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Hawaian', 'Hotdog dengan kombinasi topping tropis nan segar.', 9, '/assets/menu/Hotdog/Hotdog Hawaian.jpg')">
+                    <h3>Hotdog Hawaian</h3>
+                    <p>$9</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Hotdog Hawaian', 9)">Add to Cart</button>
+                </div>
+            
+                <div class="item">
+                    <img src="/assets/menu/Hotdog/Hotdog Spicy Buffalo.jpg" alt="Hotdog Spicy Buffalo" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Spicy Buffalo', 'Hotdog dengan saus buffalo pedas dan gurih.', 9, '/assets/menu/Hotdog/Hotdog Spicy Buffalo.jpg')">
+                    <h3>Hotdog Spicy Buffalo</h3>
+                    <p>$9</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Hotdog Spicy Buffalo', 9)">Add to Cart</button>
+                </div>
+            
+                <div class="item">
+                    <img src="/assets/menu/Hotdog/nacho Cheese hot dog.jpg" alt="Hotdog nacho Cheese" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog nacho Cheese', 'Hotdog dengan topping nacho keju yang lezat.', 9, '/assets/menu/Hotdog/nacho Cheese hot dog.jpg')">
+                    <h3>Hotdog nacho Cheese</h3>
+                    <p>$9</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Hotdog nacho Cheese', 9)">Add to Cart</button>
+                </div>            
+
+                <div class="item">
+                    <img src="/assets/menu/Hotdog/Hotdog Chilli Cheese.jpg" alt="Hotdog Chilli Cheese" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Chilli Cheese', 'Hotdog dengan topping keju dan saus cabai pedas.', 9, '/assets/menu/Hotdog/Hotdog Chilli Cheese.jpg')">
+                    <h3>Hotdog Chilli Cheese</h3>
+                    <p>$9</p>
+                    <div class="quantity-controls">
+                        <button onclick="updateQuantity(this, -1)">-</button>
+                        <span class="quantity">1</span>
+                        <button onclick="updateQuantity(this, 1)">+</button>
+                    </div>
+                    <button class="cart-button" onclick="addToCart('Hotdog Chilli Cheese', 9)">Add to Cart</button>
+                </div>
+            </section>                
+        </main>
+
+        <!-- popup untuk Menampilkan Detail Produk -->
+        <div id="productpopup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closepopup()">&times;</span>
+                <h3 id="popupProductName"></h3>
+                <img id="popupProductImage" src="" alt="Product Image">
+                <p id="popupProductDescription"></p>
+                <p><strong>Price: $<span id="popupProductPrice"></span></strong></p>
+                <div class="quantity-controls">
+                    <button onclick="updateQuantity(this, -1)">-</button>
+                    <span class="quantity" id="popupQuantity">1</span>
+                    <button onclick="updateQuantity(this, 1)">+</button>
+                </div>
+                <button id="addToCartpopupBtn" class="cart-button">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/menu/menu.js"></script>
+</html>

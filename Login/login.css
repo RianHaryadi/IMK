@@ -1,0 +1,126 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 90%;
+    max-width: 400px;
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login-header .logo {
+    width: 150px;
+    margin: 0 auto 20px;
+}
+
+.burger-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #ffa500;
+}
+
+form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+form .form-group label {
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+form .form-group input:focus {
+    outline: none;
+    border: 1px solid #ffa500;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffa500;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.login-button:hover {
+    background-color: #ff8c00;
+}
+
+.social-login p {
+    margin: 20px 0;
+    color: #aaa;
+}
+
+.social-login button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.facebook-button {
+    background-color: #3b5998;
+    color: #fff;
+}
+
+.google-button {
+    background-color: #db4437;
+    color: #fff;
+}
+
+.apple-button {
+    background-color: #000;
+    color: #fff;
+}
+
+.forgot-password {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.forgot-password a {
+    color: #ffa500;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
