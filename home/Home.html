@@ -5,31 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/b2e4e7ba14.js" crossorigin="anonymous"></script>
-    <title>BURGER JOS</title>
+    <title>Trattoria Bella Notte</title>
     <link rel="stylesheet" href="Home.css">
 </head>
 <body>
     <div class="home-container">
         <!-- Navigation Bar -->
         <header class="navbar-container">
-            <h2>BURGER<span> JOS</span></h2>
+            <h2>Trattoria <span>Bella Notte</span></h2>
             <nav class="menu">
                 <ul>
-                    <li><a href="/Home.html">Home</a></li>
-                    <li><a href="/menu/Burger.html">Menu</a></li>
-                    <li><a href="/cart/cart.html">Cart</a></li>
-                    <li><a href="/login/Login.html" class="login-button">Login</a></li>
+                    <li><a href="/menu/Menu.html">Menu</a></li>
                 </ul>
             </nav>
-            <!-- Menu Icon for Toggling -->
             <i class="fa-solid fa-bars" id="menu-icon"></i>
         </header>
 
         <!-- Main Content -->
         <main class="main-content">
             <header>
-                <h1>BURGER JOS</h1>
+                <h1>Trattoria Bella Notte</h1>
             </header>
         </main>
     </div>
@@ -38,7 +33,7 @@
     <footer>
         <div class="footer-container">
             <aside class="footer-logo">
-                <h2>BURGER  <span>JOS</span></h2>
+                <h2>Trattoria <span>Bella Notte</span></h2>
             </aside>
             <div class="footer-social-icons">
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -70,5 +65,12 @@
     
     <!-- JavaScript for toggle functionality -->
     <script src="home.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Clear cart data in localStorage on home page load
+            localStorage.removeItem('cart');
+            console.log('Cart reset on home page.');
+        });
+    </script>
 </body>
 </html>

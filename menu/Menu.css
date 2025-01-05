@@ -127,6 +127,8 @@ header p {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    display: block;
+    margin: 10px auto;
 }
 
 .cart-button:hover {
@@ -189,4 +191,12 @@ header p {
 
 .popup.active {
     display: block; /* Tampilkan popup */
+}
+.cart-button {
+    display: block;
+    margin: 10px auto;
+}
+.unavailable {
+    background-color: #ccc; /* Gray background for unavailable items */
+    pointer-events: none; /* Disable pointer events */
 }

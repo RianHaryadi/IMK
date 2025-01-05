@@ -2,58 +2,64 @@
 function displayCart() {
     const cartContainer = document.getElementById("cart-items");
     const totalPriceElement = document.getElementById("total-price");
-    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || []; // Use 'cartItems' key
+    const soldOutItems = JSON.parse(localStorage.getItem('soldOutItems')) || []; // Ambil data sold out dari localStorage
 
-    cartContainer.innerHTML = ""; // Clear current cart display
+    cartContainer.innerHTML = ""; // Kosongkan tampilan sebelumnya
     let total = 0;
 
-    // Populate the cart with items
+    if (cartItems.length === 0) {
+        cartContainer.innerHTML = `<li class="empty-cart">Your cart is empty.</li>`;
+        totalPriceElement.textContent = `Total: Rp 0`;
+        return;
+    }
+
     cartItems.forEach((item, index) => {
         const itemElement = document.createElement("li");
         itemElement.classList.add("cart-item");
+        if (soldOutItems.includes(item.name)) {
+            itemElement.classList.add('sold-out');
+        }
         itemElement.innerHTML = `
-            <span>${item.name} - $${item.price} x ${item.quantity}</span>
+            <div class="cart-item-content">
+                <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                <div class="cart-item-details">
+                    <span>${item.name}</span>
+                    <span>Rp ${item.price.toLocaleString('id-ID')} x ${item.quantity}</span>
+                </div>
+            </div>
             <button class="remove-item" data-index="${index}">Remove</button>
         `;
         cartContainer.appendChild(itemElement);
 
-        // Update the total price
+        // Hitung total harga
         total += item.price * item.quantity;
     });
 
-    totalPriceElement.textContent = `Total: $${total.toFixed(2)}`;
+    totalPriceElement.textContent = `Total: Rp ${total.toLocaleString('id-ID')}`; // Tampilkan total harga
+    localStorage.setItem('totalPrice', total.toFixed(2)); // Simpan total harga ke localStorage
 
-    // Add event listeners to each remove button
+    // Tambahkan event listener untuk tombol remove
     document.querySelectorAll('.remove-item').forEach(button => {
         button.addEventListener('click', (event) => {
             const index = event.target.getAttribute('data-index');
             removeItem(index);
         });
     });
-
-    // Enable or disable the "Pesan Sekarang" button
-    const orderNowButton = document.getElementById('order-now');
-    if (cartItems.length === 0) {
-        orderNowButton.disabled = true;
-        orderNowButton.classList.add("disabled");
-    } else {
-        orderNowButton.disabled = false;
-        orderNowButton.classList.remove("disabled");
-    }
 }
 
 // Function to remove an item from the cart
 function removeItem(index) {
-    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    cartItems.splice(index, 1); // Remove item by index
-    localStorage.setItem('cartItems', JSON.stringify(cartItems)); // Update localStorage
-    displayCart(); // Refresh cart display
-    updateCartCount(); // Update the cart item count
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || []; // Use 'cartItems' key
+    cartItems.splice(index, 1); // Hapus item berdasarkan indeks
+    localStorage.setItem('cartItems', JSON.stringify(cartItems)); // Use 'cartItems' key
+    displayCart(); // Refresh tampilan keranjang
+    updateCartCount(); // Perbarui jumlah item di ikon
 }
 
 // Update the cart item count for cart page
 function updateCartCount() {
-    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || []; // Use 'cartItems' key
     const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
     const cartCountElement = document.getElementById('cart-count');
 
@@ -66,12 +72,32 @@ function updateCartCount() {
 }
 
 // Redirect to payment page when "Pesan Sekarang" is clicked
-document.getElementById('order-now').addEventListener('click', () => {
-    window.location.href = '/payment/payment.html'; // Adjust the path to the actual location of payment.html
-});
+function redirectToPayment() {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || []; // Use 'cartItems' key
+    if (cartItems.length === 0) {
+        alert("Your cart is empty! Please add items to proceed.");
+        return;
+    }
+    localStorage.setItem('cartItems', JSON.stringify(cartItems)); // Use 'cartItems' key
+    const serviceFee = 5000; // Example service fee
+    const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    localStorage.setItem('totalPrice', totalPrice.toFixed(2));
+    localStorage.setItem('serviceFee', serviceFee); // Simpan service fee ke localStorage
+    window.location.href = '/payment/pay.html'; // Sesuaikan path ke lokasi file pembayaran Anda
+}
 
 // Call displayCart and updateCartCount when the page loads
 document.addEventListener("DOMContentLoaded", () => {
     displayCart();
     updateCartCount();
+    document.getElementById('order-now').addEventListener('click', redirectToPayment);
 });
+
+// Clear cart data after reaching the payment success page
+if (window.location.pathname.includes('PembayaranBerhasil.html')) {
+    console.log('Payment successful. Clearing cart...');
+    localStorage.removeItem('cartItems');
+    localStorage.removeItem('totalPrice');
+    localStorage.removeItem('serviceFee');
+    console.log('Cart has been reset after payment success.');
+}

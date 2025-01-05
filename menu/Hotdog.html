@@ -36,123 +36,133 @@
             
             <section class="Menu">
                 <div class="item">
-                    <img src="/assets/menu/Hotdog/Mexican-Hotdogs-WEBSITE-scaled.jpg" alt="Hotdog Meksiko" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Meksiko', 'Hotdog Meksiko dengan cita rasa khas Meksiko!', 10, '/assets/menu/Hotdog/Mexican-Hotdogs-WEBSITE-scaled.jpg')">
+                    <img src="/assets/menu/Hotdog/Mexican-Hotdogs-WEBSITE-scaled.jpg" alt="Hotdog Meksiko" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Meksiko', 'Hotdog Meksiko dengan cita rasa khas Meksiko!', 150000, '/assets/menu/Hotdog/Mexican-Hotdogs-WEBSITE-scaled.jpg')">
                     <h3>Hotdog Meksiko</h3>
-                    <p>$10</p>
-                    <div class="quantity-controls">
+                    <p>Rp 150.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Hotdog Meksiko', 10)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Hotdog Meksiko', 150000, '/assets/menu/Hotdog/Mexican-Hotdogs-WEBSITE-scaled.jpg', this)">Confirm</button>
                 </div>
             
                 <div class="item">
-                    <img src="/assets/menu/Hotdog/Summer-Tuna-Roll-with-Lettuce-1.jpg" alt="Hotdog Tuna Mayo" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Tuna Mayo', 'Hotdog Tuna Mayo dengan isian tuna lezat dan mayo creamy.', 7, '/assets/menu/Hotdog/Summer-Tuna-Roll-with-Lettuce-1.jpg')">
+                    <img src="/assets/menu/Hotdog/Summer-Tuna-Roll-with-Lettuce-1.jpg" alt="Hotdog Tuna Mayo" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Tuna Mayo', 'Hotdog Tuna Mayo dengan isian tuna lezat dan mayo creamy.', 105000, '/assets/menu/Hotdog/Summer-Tuna-Roll-with-Lettuce-1.jpg')">
                     <h3>Hotdog Tuna Mayo</h3>
-                    <p>$7</p>
-                    <div class="quantity-controls">
+                    <p>Rp 105.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Hotdog Tuna Mayo', 7)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Hotdog Tuna Mayo', 105000, '/assets/menu/Hotdog/Summer-Tuna-Roll-with-Lettuce-1.jpg', this)">Confirm</button>
                 </div>
             
                 <div class="item">
-                    <img src="/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.21.53.jpeg" alt="Hotdog Terimayo" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Terimayo', 'Hotdog Terimayo dengan saus teriyaki dan mayo khas Jepang.', 8, '/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.21.53.jpeg')">
+                    <img src="/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.21.53.jpeg" alt="Hotdog Terimayo" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Terimayo', 'Hotdog Terimayo dengan saus teriyaki dan mayo khas Jepang.', 120000, '/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.21.53.jpeg')">
                     <h3>Hotdog Terimayo</h3>
-                    <p>$8</p>
-                    <div class="quantity-controls">
+                    <p>Rp 120.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Hotdog Terimayo', 8)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Hotdog Terimayo', 120000, '/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.21.53.jpeg', this)">Confirm</button>
                 </div>
             
                 <div class="item">
-                    <img src="/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.22.14.jpeg" alt="Hotdog Klasik" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Klasik', 'Hotdog klasik dengan rasa sederhana namun nikmat.', 4, '/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.22.14.jpeg')">
+                    <img src="/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.22.14.jpeg" alt="Hotdog Klasik" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Klasik', 'Hotdog klasik dengan rasa sederhana namun nikmat.', 60000, '/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.22.14.jpeg')">
                     <h3>Hotdog Klasik</h3>
-                    <p>$4</p>
-                    <div class="quantity-controls">
+                    <p>Rp 60.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Hotdog Klasik', 4)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Hotdog Klasik', 60000, '/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.22.14.jpeg', this)">Confirm</button>
                 </div>
             
                 <div class="item">
-                    <img src="/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.25.37.jpeg" alt="Hotdog Keju" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Keju', 'Hotdog Keju dengan keju leleh yang melimpah.', 12, '/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.25.37.jpeg')">
+                    <img src="/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.25.37.jpeg" alt="Hotdog Keju" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Keju', 'Hotdog Keju dengan keju leleh yang melimpah.', 180000, '/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.25.37.jpeg')">
                     <h3>Hotdog Keju</h3>
-                    <p>$12</p>
-                    <div class="quantity-controls">
+                    <p>Rp 180.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Hotdog Keju', 12)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Hotdog Keju', 180000, '/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.25.37.jpeg', this)">Confirm</button>
                 </div>
             
                 <div class="item">
-                    <img src="/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.38.18.jpeg" alt="Limoncello" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Pedas Jalapeno', 'Hotdog pedas dengan tambahan irisan jalapeno segar.', 9, '/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.38.18.jpeg')">
+                    <img src="/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.38.18.jpeg" alt="Limoncello" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Pedas Jalapeno', 'Hotdog pedas dengan tambahan irisan jalapeno segar.', 135000, '/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.38.18.jpeg')">
                     <h3>Hotdog Pedas Jalapeno</h3>
-                    <p>$9</p>
-                    <div class="quantity-controls">
+                    <p>Rp 135.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Hotdog Pedas Jalapeno', 9)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Hotdog Pedas Jalapeno', 135000, '/assets/menu/Hotdog/WhatsApp Image 2024-11-18 at 23.38.18.jpeg', this)">Confirm</button>
                 </div>
             
                 <div class="item">
-                    <img src="/assets/menu/Hotdog/Hotdog Hawaian.jpg" alt="Hotdog Hawaian" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Hawaian', 'Hotdog dengan kombinasi topping tropis nan segar.', 9, '/assets/menu/Hotdog/Hotdog Hawaian.jpg')">
+                    <img src="/assets/menu/Hotdog/Hotdog Hawaian.jpg" alt="Hotdog Hawaian" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Hawaian', 'Hotdog dengan kombinasi topping tropis nan segar.', 135000, '/assets/menu/Hotdog/Hotdog Hawaian.jpg')">
                     <h3>Hotdog Hawaian</h3>
-                    <p>$9</p>
-                    <div class="quantity-controls">
+                    <p>Rp 135.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Hotdog Hawaian', 9)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Hotdog Hawaian', 135000, '/assets/menu/Hotdog/Hotdog Hawaian.jpg', this)">Confirm</button>
                 </div>
             
                 <div class="item">
-                    <img src="/assets/menu/Hotdog/Hotdog Spicy Buffalo.jpg" alt="Hotdog Spicy Buffalo" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Spicy Buffalo', 'Hotdog dengan saus buffalo pedas dan gurih.', 9, '/assets/menu/Hotdog/Hotdog Spicy Buffalo.jpg')">
+                    <img src="/assets/menu/Hotdog/Hotdog Spicy Buffalo.jpg" alt="Hotdog Spicy Buffalo" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Spicy Buffalo', 'Hotdog dengan saus buffalo pedas dan gurih.', 135000, '/assets/menu/Hotdog/Hotdog Spicy Buffalo.jpg')">
                     <h3>Hotdog Spicy Buffalo</h3>
-                    <p>$9</p>
-                    <div class="quantity-controls">
+                    <p>Rp 135.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Hotdog Spicy Buffalo', 9)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Hotdog Spicy Buffalo', 135000, '/assets/menu/Hotdog/Hotdog Spicy Buffalo.jpg', this)">Confirm</button>
                 </div>
             
                 <div class="item">
-                    <img src="/assets/menu/Hotdog/nacho Cheese hot dog.jpg" alt="Hotdog nacho Cheese" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog nacho Cheese', 'Hotdog dengan topping nacho keju yang lezat.', 9, '/assets/menu/Hotdog/nacho Cheese hot dog.jpg')">
+                    <img src="/assets/menu/Hotdog/nacho Cheese hot dog.jpg" alt="Hotdog nacho Cheese" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog nacho Cheese', 'Hotdog dengan topping nacho keju yang lezat.', 135000, '/assets/menu/Hotdog/nacho Cheese hot dog.jpg')">
                     <h3>Hotdog nacho Cheese</h3>
-                    <p>$9</p>
-                    <div class="quantity-controls">
+                    <p>Rp 135.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Hotdog nacho Cheese', 9)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Hotdog nacho Cheese', 135000, '/assets/menu/Hotdog/nacho Cheese hot dog.jpg', this)">Confirm</button>
                 </div>            
 
                 <div class="item">
-                    <img src="/assets/menu/Hotdog/Hotdog Chilli Cheese.jpg" alt="Hotdog Chilli Cheese" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Chilli Cheese', 'Hotdog dengan topping keju dan saus cabai pedas.', 9, '/assets/menu/Hotdog/Hotdog Chilli Cheese.jpg')">
+                    <img src="/assets/menu/Hotdog/Hotdog Chilli Cheese.jpg" alt="Hotdog Chilli Cheese" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Hotdog Chilli Cheese', 'Hotdog dengan topping keju dan saus cabai pedas.', 135000, '/assets/menu/Hotdog/Hotdog Chilli Cheese.jpg')">
                     <h3>Hotdog Chilli Cheese</h3>
-                    <p>$9</p>
-                    <div class="quantity-controls">
+                    <p>Rp 135.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Hotdog Chilli Cheese', 9)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Hotdog Chilli Cheese', 135000, '/assets/menu/Hotdog/Hotdog Chilli Cheese.jpg', this)">Confirm</button>
                 </div>
             </section>                
         </main>
@@ -164,7 +174,7 @@
                 <h3 id="popupProductName"></h3>
                 <img id="popupProductImage" src="" alt="Product Image">
                 <p id="popupProductDescription"></p>
-                <p><strong>Price: $<span id="popupProductPrice"></span></strong></p>
+                <p><strong>Price: Rp <span id="popupProductPrice"></span></strong></p>
                 <div class="quantity-controls">
                     <button onclick="updateQuantity(this, -1)">-</button>
                     <span class="quantity" id="popupQuantity">1</span>
@@ -176,4 +186,38 @@
     </div>
 </body>
 <script src="/menu/menu.js"></script>
+<script>
+    function confirmAddToCart(productName, price, image, button) {
+        // ...existing code...
+        button.style.display = 'none';
+        button.previousElementSibling.style.display = 'block';
+    }
+
+    function markItemsUnavailable() {
+        const soldOutItems = JSON.parse(localStorage.getItem('soldOutItems')) || [];
+        document.querySelectorAll('.item').forEach(item => {
+            const itemName = item.querySelector('h3').innerText;
+            if (soldOutItems.includes(itemName)) {
+                item.classList.add('unavailable');
+                item.querySelector('.cart-button').disabled = true;
+            }
+        });
+    }
+
+    function resetMenu() {
+        document.querySelectorAll('.item').forEach(item => {
+            item.classList.remove('unavailable');
+            item.querySelector('.cart-button').disabled = false;
+        });
+        localStorage.removeItem('soldOutItems');
+        location.reload(); // Reload the page
+    }
+
+    function navigateToPage(page) {
+        window.location.href = page;
+    }
+
+    // Call markItemsUnavailable on page load
+    document.addEventListener('DOMContentLoaded', markItemsUnavailable);
+</script>
 </html>

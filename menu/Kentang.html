@@ -36,123 +36,133 @@
             
             <section class="Menu">
                 <div class="item">
-                    <img src="/assets/menu/KENTANG/istockphoto-691979116-170667a.jpg" alt="Lasagna ai Funghi" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Trufle', 'Kentang Goreng Trufle adalah kentang goreng yang dibumbui dengan truffle yang lezat.', 15, '/assets/menu/KENTANG/istockphoto-691979116-170667a.jpg')">
+                    <img src="/assets/menu/KENTANG/istockphoto-691979116-170667a.jpg" alt="Kentang Goreng Trufle" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Trufle', 'Kentang Goreng Trufle adalah kentang goreng yang dibumbui dengan truffle yang lezat.', 25000, '/assets/menu/KENTANG/istockphoto-691979116-170667a.jpg')">
                     <h3>Kentang Goreng Trufle</h3>
-                    <p>$15</p>
-                    <div class="quantity-controls">
+                    <p>Rp 25.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Kentang Goreng Trufle', 15)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Kentang Goreng Trufle', 25000, '/assets/menu/KENTANG/istockphoto-691979116-170667a.jpg', this)">Confirm</button>
                 </div>
             
                 <div class="item">
-                    <img src="/assets/menu/KENTANG/pngtree-garlic-french-fries-with-chives-recipe-recipe-french-foods-photo-image_533441.jpg" alt="Lasagna al Forno" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Garlic', 'Kentang Goreng Garlic adalah kentang goreng dengan taburan bawang putih dan chives yang gurih.', 14, '/assets/menu/KENTANG/pngtree-garlic-french-fries-with-chives-recipe-recipe-french-foods-photo-image_533441.jpg')">
+                    <img src="/assets/menu/KENTANG/pngtree-garlic-french-fries-with-chives-recipe-recipe-french-foods-photo-image_533441.jpg" alt="Lasagna al Forno" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Garlic', 'Kentang Goreng Garlic adalah kentang goreng dengan taburan bawang putih dan chives yang gurih.', 21000, '/assets/menu/KENTANG/pngtree-garlic-french-fries-with-chives-recipe-recipe-french-foods-photo-image_533441.jpg')">
                     <h3>Kentang Goreng Garlic</h3>
-                    <p>$14</p>
-                    <div class="quantity-controls">
+                    <p>Rp 21.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Kentang Goreng Garlic', 14)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Kentang Goreng Garlic', 21000, '/assets/menu/KENTANG/pngtree-garlic-french-fries-with-chives-recipe-recipe-french-foods-photo-image_533441.jpg', this)">Confirm</button>
                 </div>
             
                 <div class="item">
-                    <img src="/assets/menu/KENTANG/thumb-4jpg-20240221041413.jpg" alt="Lasagna al Pesto" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Saus Keju', 'Kentang Goreng Saus Keju memiliki saus keju yang kental dan lezat, cocok untuk pencinta keju.', 16, '/assets/menu/KENTANG/thumb-4jpg-20240221041413.jpg')">
+                    <img src="/assets/menu/KENTANG/thumb-4jpg-20240221041413.jpg" alt="Lasagna al Pesto" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Saus Keju', 'Kentang Goreng Saus Keju memiliki saus keju yang kental dan lezat, cocok untuk pencinta keju.', 24000, '/assets/menu/KENTANG/thumb-4jpg-20240221041413.jpg')">
                     <h3>Kentang Goreng Saus Keju</h3>
-                    <p>$16</p>
-                    <div class="quantity-controls">
+                    <p>Rp 24.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Kentang Goreng Saus Keju', 16)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Kentang Goreng Saus Keju', 24000, '/assets/menu/KENTANG/thumb-4jpg-20240221041413.jpg', this)">Confirm</button>
                 </div>
             
                 <div class="item">
-                    <img src="/assets/menu/KENTANG/kentang cajun.jpg" alt="kentang cajun" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Cajun', 'Kentang Goreng Cajun memiliki rasa pedas dan berbumbu cajun yang khas.', 16, '/assets/menu/KENTANG/kentang cajun.jpg')">
+                    <img src="/assets/menu/KENTANG/kentang cajun.jpg" alt="kentang cajun" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Cajun', 'Kentang Goreng Cajun memiliki rasa pedas dan berbumbu cajun yang khas.', 22000, '/assets/menu/KENTANG/kentang cajun.jpg')">
                     <h3>Kentang Goreng Cajun</h3>
-                    <p>$16</p>
-                    <div class="quantity-controls">
+                    <p>Rp 22.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Kentang Goreng Cajun', 16)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Kentang Goreng Cajun', 22000, '/assets/menu/KENTANG/kentang cajun.jpg', this)">Confirm</button>
                 </div>
             
                 <div class="item">
-                    <img src="/assets/menu/KENTANG/Kentang Goreng Bacon & Cheese.jpg" alt="Kentang Goreng Bacon & Cheese" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Bacon & Cheese', 'Kentang Goreng Bacon & Cheese adalah kentang goreng dengan topping bacon dan keju leleh yang melimpah.', 16, '/assets/menu/KENTANG/Kentang Goreng Bacon & Cheese.jpg')">
+                    <img src="/assets/menu/KENTANG/Kentang Goreng Bacon & Cheese.jpg" alt="Kentang Goreng Bacon & Cheese" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Bacon & Cheese', 'Kentang Goreng Bacon & Cheese adalah kentang goreng dengan topping bacon dan keju leleh yang melimpah.', 26000, '/assets/menu/KENTANG/Kentang Goreng Bacon & Cheese.jpg')">
                     <h3>Kentang Goreng Bacon & Cheese</h3>
-                    <p>$16</p>
-                    <div class="quantity-controls">
+                    <p>Rp 26.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Kentang Goreng Bacon & Cheese', 16)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Kentang Goreng Bacon & Cheese', 26000, '/assets/menu/KENTANG/Kentang Goreng Bacon & Cheese.jpg', this)">Confirm</button>
                 </div>
             
                 <div class="item">
-                    <img src="/assets/menu/KENTANG/Kentang Goreng Greek.jpg" alt="Kentang Goreng Greek" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Greek', 'Kentang Goreng Greek mengandung bumbu khas Yunani dengan rasa yang segar dan pedas.', 16, '/assets/menu/KENTANG/Kentang Goreng Greek.jpg')">
+                    <img src="/assets/menu/KENTANG/Kentang Goreng Greek.jpg" alt="Kentang Goreng Greek" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Greek', 'Kentang Goreng Greek mengandung bumbu khas Yunani dengan rasa yang segar dan pedas.', 23000, '/assets/menu/KENTANG/Kentang Goreng Greek.jpg')">
                     <h3>Kentang Goreng Greek</h3>
-                    <p>$16</p>
-                    <div class="quantity-controls">
+                    <p>Rp 23.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Kentang Goreng Greek', 16)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Kentang Goreng Greek', 23000, '/assets/menu/KENTANG/Kentang Goreng Greek.jpg', this)">Confirm</button>
                 </div>
             
                 <div class="item">
-                    <img src="/assets/menu/KENTANG/kentang goreng mexican.jpg" alt="kentang goreng mexican" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Mexican', 'Kentang Goreng Mexican dengan bumbu dan saus khas Meksiko yang pedas dan gurih.', 16, '/assets/menu/KENTANG/kentang goreng mexican.jpg')">
+                    <img src="/assets/menu/KENTANG/kentang goreng mexican.jpg" alt="kentang goreng mexican" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Mexican', 'Kentang Goreng Mexican dengan bumbu dan saus khas Meksiko yang pedas dan gurih.', 24000, '/assets/menu/KENTANG/kentang goreng mexican.jpg')">
                     <h3>Kentang Goreng Mexican</h3>
-                    <p>$16</p>
-                    <div class="quantity-controls">
+                    <p>Rp 24.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Kentang Goreng Mexican', 16)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Kentang Goreng Mexican', 24000, '/assets/menu/KENTANG/kentang goreng mexican.jpg', this)">Confirm</button>
                 </div>
             
                 <div class="item">
-                    <img src="/assets/menu/KENTANG/Kentang Goreng Salt & Vinegar.jpg" alt="Kentang Goreng Salt & Vinegar" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Salt & Vinegar', 'Kentang Goreng Salt & Vinegar memiliki perpaduan rasa asin dan asam yang segar.', 16, '/assets/menu/KENTANG/Kentang Goreng Salt & Vinegar.jpg')">
+                    <img src="/assets/menu/KENTANG/Kentang Goreng Salt & Vinegar.jpg" alt="Kentang Goreng Salt & Vinegar" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Salt & Vinegar', 'Kentang Goreng Salt & Vinegar memiliki perpaduan rasa asin dan asam yang segar.', 20000, '/assets/menu/KENTANG/Kentang Goreng Salt & Vinegar.jpg')">
                     <h3>Kentang Goreng Salt & Vinegar</h3>
-                    <p>$16</p>
-                    <div class="quantity-controls">
+                    <p>Rp 20.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Kentang Goreng Salt & Vinegar', 16)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Kentang Goreng Salt & Vinegar', 20000, '/assets/menu/KENTANG/Kentang Goreng Salt & Vinegar.jpg', this)">Confirm</button>
                 </div>
             
                 <div class="item">
-                    <img src="/assets/menu/KENTANG/Kentang Goreng Sweet Chili.jpg" alt="Kentang Goreng Sweet Chili" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Sweet Chili', 'Kentang Goreng Sweet Chili memiliki rasa manis dan pedas dengan saus chili yang khas.', 16, '/assets/menu/KENTANG/Kentang Goreng Sweet Chili.jpg')">
+                    <img src="/assets/menu/KENTANG/Kentang Goreng Sweet Chili.jpg" alt="Kentang Goreng Sweet Chili" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Sweet Chili', 'Kentang Goreng Sweet Chili memiliki rasa manis dan pedas dengan saus chili yang khas.', 22000, '/assets/menu/KENTANG/Kentang Goreng Sweet Chili.jpg')">
                     <h3>Kentang Goreng Sweet Chili</h3>
-                    <p>$16</p>
-                    <div class="quantity-controls">
+                    <p>Rp 22.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Kentang Goreng Sweet Chili', 16)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Kentang Goreng Sweet Chili', 22000, '/assets/menu/KENTANG/Kentang Goreng Sweet Chili.jpg', this)">Confirm</button>
                 </div>
             
                 <div class="item">
-                    <img src="/assets/menu/KENTANG/kentang Okonomiyaki.jpg" alt="kentang Goreng Okonomiyaki" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Okonomiyaki', 'Kentang Goreng Okonomiyaki terinspirasi dari hidangan Jepang dengan rasa gurih dan lezat.', 16, '/assets/menu/KENTANG/kentang Okonomiyaki.jpg')">
+                    <img src="/assets/menu/KENTANG/kentang Okonomiyaki.jpg" alt="kentang Goreng Okonomiyaki" class="rounded-md w-full sm:h-40 md:h-45 lg:h-64" onclick="showProductDetails('Kentang Goreng Okonomiyaki', 'Kentang Goreng Okonomiyaki terinspirasi dari hidangan Jepang dengan rasa gurih dan lezat.', 24000, '/assets/menu/KENTANG/kentang Okonomiyaki.jpg')">
                     <h3>Kentang Goreng Okonomiyaki</h3>
-                    <p>$16</p>
-                    <div class="quantity-controls">
+                    <p>Rp 24.000</p>
+                    <div class="quantity-controls" style="display: none;">
                         <button onclick="updateQuantity(this, -1)">-</button>
                         <span class="quantity">1</span>
                         <button onclick="updateQuantity(this, 1)">+</button>
                     </div>
-                    <button class="cart-button" onclick="addToCart('Kentang Goreng Okonomiyaki', 16)">Add to Cart</button>
+                    <button class="cart-button" onclick="showQuantityControls(this)">Add to Cart</button>
+                    <button class="cart-button confirm-button" style="display: none;" onclick="confirmAddToCart('Kentang Goreng Okonomiyaki', 24000, '/assets/menu/KENTANG/kentang Okonomiyaki.jpg', this)">Confirm</button>
                 </div>
             </section>
         </main>
@@ -164,7 +174,7 @@
                 <h3 id="popupProductName"></h3>
                 <img id="popupProductImage" src="" alt="Product Image">
                 <p id="popupProductDescription"></p>
-                <p><strong>Price: $<span id="popupProductPrice"></span></strong></p>
+                <p><strong>Price: Rp <span id="popupProductPrice"></span></strong></p>
                 <div class="quantity-controls">
                     <button onclick="updateQuantity(this, -1)">-</button>
                     <span class="quantity" id="popupQuantity">1</span>
@@ -176,4 +186,38 @@
     </div>
 </body>
 <script src="/menu/menu.js"></script>
+<script>
+    function confirmAddToCart(productName, price, image, button) {
+        // ...existing code...
+        button.style.display = 'none';
+        button.previousElementSibling.style.display = 'block';
+    }
+
+    function markItemsUnavailable() {
+        const soldOutItems = JSON.parse(localStorage.getItem('soldOutItems')) || [];
+        document.querySelectorAll('.item').forEach(item => {
+            const itemName = item.querySelector('h3').innerText;
+            if (soldOutItems.includes(itemName)) {
+                item.classList.add('unavailable');
+                item.querySelector('.cart-button').disabled = true;
+            }
+        });
+    }
+
+    function resetMenu() {
+        document.querySelectorAll('.item').forEach(item => {
+            item.classList.remove('unavailable');
+            item.querySelector('.cart-button').disabled = false;
+        });
+        localStorage.removeItem('soldOutItems');
+        location.reload(); // Reload the page
+    }
+
+    function navigateToPage(page) {
+        window.location.href = page;
+    }
+
+    // Call markItemsUnavailable on page load
+    document.addEventListener('DOMContentLoaded', markItemsUnavailable);
+</script>
 </html>

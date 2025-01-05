@@ -198,11 +198,3 @@ button:hover {
         font-size: 14px;
     }
 }
-#order-now:disabled {
-    background-color: #ccc; /* Warna abu-abu untuk tombol nonaktif */
-    cursor: not-allowed;    /* Ubah kursor menjadi tanda tidak boleh */
-}
-
-#order-now.disabled {
-    opacity: 0.6;           /* Ubah transparansi tombol saat nonaktif */
-}

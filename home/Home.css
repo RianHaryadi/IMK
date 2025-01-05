@@ -42,59 +42,16 @@
     gap: 20px;
 }
 
-/* Styling untuk tautan navbar agar sama tinggi dengan tombol login */
 .navbar-container .menu ul li a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px; /* Samakan tinggi dengan tombol Login */
-    padding: 0 15px; /* Tambahkan padding horizontal */
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    border-radius: 5px; /* Untuk menjaga konsistensi bentuk */
-    transition: background-color 0.3s, color 0.3s;
+    transition: color 0.3s;
 }
 
 .navbar-container .menu ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffb03b;
 }
-
-/* Khusus untuk tombol Login */
-.navbar-container .menu ul li .login-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px; /* Samakan tinggi dengan tautan lain */
-    padding: 0 20px;
-    color: #fff;
-    background-color: #ffb03b;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-    cursor: pointer;
-}
-
-.navbar-container .menu ul li .login-button:hover {
-    background-color: #e0a035;
-    color: #333;
-}
-
-@media screen and (max-width: 768px) {
-    .navbar-container .menu ul li a {
-        padding: 10px 15px;
-        font-size: 14px;
-    }
-
-    .navbar-container .menu ul li .login-button {
-        padding: 10px 20px;
-    }
-}
-
 
 /* Hide menu icon on larger screens */
 #menu-icon {
@@ -109,7 +66,7 @@
 .main-content {
     flex: 1;
     padding: 20px;
-    background-image: url(/assets/bg/bg1.jpeg);
+    background-image: url(/assets/bg/bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -117,8 +74,10 @@
 }
 
 header h1 {
-    font-size: 30px;
+    font-size: 48px;
     color : #ffb03b;
+    text-align: center;
+    margin-top: 200px;
 }
 
 /* Footer Styling */
@@ -219,29 +178,4 @@ footer {
         text-align: center;
     }
 }
-/* Styling untuk tombol login */
-.navbar-container .menu ul li .login-button {
-    display: inline-block;
-    padding: 8px 20px;
-    color: #fff;
-    background-color: #ffb03b;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-    cursor: pointer;
-}
 
-.navbar-container .menu ul li .login-button:hover {
-    background-color: #e0a035;
-    color: #333;
-}
-@media screen and (max-width: 768px) {
-    .navbar-container .menu ul li .login-button {
-        padding: 10px 15px;
-        font-size: 14px;
-    }
-}
